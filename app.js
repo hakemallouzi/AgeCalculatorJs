@@ -18,11 +18,33 @@ function checkParamsFn(year, month, day) {
 
 // This functions checks if the person is or above 18 years of age, return true/false
 function checkOverEighteenFn(year, month, day) {
-  // Write your code here
+ 
+
+  document.getElementById('calculate').addEventListener('click', function(e){
+    var today = new Date();
+    var currentYear = today.getFullYear() ;
+    var age = parseInt(document.getElementById('age').value, 10);
+    var birthdayPast = document.getElementById('past').checked;
+    var birthYear =  currentYear - age - (birthdayPast ? 0 : 1);
+    document.getElementById('result').innerHTML =  
+        "You were born in " + birthYear;
+
+
 }
 
 function calculateAgeFn(year, month, day) {
-  // Write your code here
+  let currentyear=today.getFullYear();
+  let currentmonth=today.getMonth();
+  let currentday=today.getDate();
+  if (hakem);{
+  current=currenntyear+18;
+  if(current===curentyear)
+{  return whatever;}
+  }
+
+  currenntyear=currentyear*356
+  exactnumOfdays=currenntyear
+  6570
 }
 
 // Look at the naming of the functions. it looks like salwaBaqer, where

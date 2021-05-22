@@ -14,39 +14,41 @@
 // This functions should check the integrity of the parameters and pass true/false
 function checkParamsFn(year, month, day) {
   // Write your code here
+  if (Number.isInteger(year))
+  if (Number.isInteger(month)) if (Number.isInteger(day)) return true;
+return false;
 }
+console.log(checkParamsFn("2000", 6, 6));
+
 
 // This functions checks if the person is or above 18 years of age, return true/false
 function checkOverEighteenFn(year, month, day) {
  
+  let yearx = new Date();
+   let monthx = new Date();
+   let dayx = new Date();
 
-  document.getElementById('calculate').addEventListener('click', function(e){
-    var today = new Date();
-    var currentYear = today.getFullYear() ;
-    var age = parseInt(document.getElementById('age').value, 10);
-    var birthdayPast = document.getElementById('past').checked;
-    var birthYear =  currentYear - age - (birthdayPast ? 0 : 1);
-    document.getElementById('result').innerHTML =  
-        "You were born in " + birthYear;
-
-
-}
+   if (yearx.getFullYear() < year + 18) return false;
+   else if (yearx.getFullYear() > year + 18) return true;
+   else if (monthx.getMonth() + 1 < month) return false;
+   else if (monthx.getMonth() + 1 > month) return true;
+   else if (dayx.getDate() < day) return false;
+   else if (dayx.getDate() >= day) return true;
+ }
+ console.log(checkOverEighteenFn(2003, 5, 19));
+  
 
 function calculateAgeFn(year, month, day) {
-  let currentyear=today.getFullYear();
-  let currentmonth=today.getMonth();
-  let currentday=today.getDate();
-  if (hakem);{
-  current=currenntyear+18;
-  if(current===curentyear)
-{  return whatever;}
+  // Write your code here
+  let yearx = new Date();
+  if (!checkParamsFn) return "error: check previous ";
+  else if (!checkOverEighteenFn) return "error: check previous";
+  else {
+    return yearx.getFullYear() - year;
   }
-
-  currenntyear=currentyear*356
-  exactnumOfdays=currenntyear
-  6570
 }
 
+console.log(calculateAgeFn(1997, 2, 24));
 // Look at the naming of the functions. it looks like salwaBaqer, where
 // the first letter of the first word is small, while the first letter of the
 // second word is Capital. This is called "Camel Casing."
